@@ -1,0 +1,20 @@
+<p>voiture works!</p>
+
+<div class="row">
+	<div class="col">
+		<div ngbDropdown class="d-inline-block">
+			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+				Toggle dropdown
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button (click)="changeMark('renault')" ngbDropdownItem>renault</button>
+				<button (click)="changeMark('mercedes')"ngbDropdownItem>mercedes</button>
+				<button (click)="changeMark('toyota')"ngbDropdownItem>toyota</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div classe="model">
+    <app-car-model  [tablist]="Islist"> </app-car-model>
+</div> -->
