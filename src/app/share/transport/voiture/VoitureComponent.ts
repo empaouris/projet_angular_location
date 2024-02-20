@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PostServiceComponent } from '../../../service/post-service/post-service.component';
 import { Car } from '../../../models/Car.model';
+import { TransportComponent } from '../transport.component';
 
 
 @Component({
@@ -13,11 +14,13 @@ export class VoitureComponent {
   Islist?:Car[];
   newSelectedMark?:string;
 
-  constructor(private _postService: PostServiceComponent) { }
+  constructor(private _postService: PostServiceComponent) {
+    this.changeMark("")
+  }
 
   changeMark(newSelectedMark: string) {(
       this._postService.getAllModel(newSelectedMark).subscribe({
-        next: (Observable) =>  this.Islist = Observable
+        next: (datas) =>  this.Islist = datas
       })
     )}
 }

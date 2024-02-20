@@ -1,5 +1,5 @@
 <p>voiture works!</p>
-
+<h1>"je suis dans le menu voiture"</h1>
 <div class="row">
 	<div class="col">
 		<div ngbDropdown class="d-inline-block">
@@ -14,6 +14,12 @@
 		</div>
 	</div>
 </div>
+
+<p *ngFor="let car of Islist">
+	{{ car | json }}
+	{{ car.marque }}
+	{{ car.model }}
+</p>
 
 <!-- <div classe="model">
     <app-car-model  [tablist]="Islist"> </app-car-model>

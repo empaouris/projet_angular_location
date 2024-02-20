@@ -13,11 +13,11 @@ export class PostServiceComponent {
   constructor(private _httpclient:HttpClient){}
 
   getOneModel(modeId:number):Observable<Car>{
-    return this._httpclient.get<Car>("http:/model:model")
+    return this._httpclient.get<Car>("http://localhost:3000/car")
 
   }
   getAllModel(nameMark:string):Observable<Car[]>{
-    return this._httpclient.get<Car[]>("http:/model:nameMark")
+    return this._httpclient.get<Car[]>("http://localhost:3000/car")
     }
   
   PostOneModel(nameMark:string){
